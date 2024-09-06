@@ -1,13 +1,11 @@
 //your JS code here. If required.
-function updateSize() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const sizeText = document.getElementById('sizeText');
-    sizeText.textContent = `Width: ${width} and Height: ${height}`;
-}
+ function updateSize() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        document.getElementById('width').textContent = width;
+        document.getElementById('height').textContent = height;
+    }
 
-// Update size initially
-updateSize();
+    window.addEventListener('resize', updateSize);
 
-// Attach resize event listener to window
-window.addEventListener('resize', updateSize);
+    updateSize(); // Initial call to set initial width and height
